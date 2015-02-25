@@ -1,0 +1,69 @@
+.container {
+	height:100vH
+}
+nav {
+  background-color: $primary-color;
+}
+main {
+	min-height:400px;
+	padding:2em !important;
+	background-color: #fff;
+}
+
+.tabs {
+	height: $navbar-height; 
+	li.tab {
+		line-height: $navbar-height;
+		height: $navbar-height;
+		background-color: $primary-color-dark;
+		a {
+			color: #fff;
+		}
+	}
+}
+.brand {
+	background-color: $primary-color-dark;
+	color: white;
+	padding: 0.2rem 0.5rem;
+	.brand-text{
+		font-size:2em;
+	} 
+}
+body {
+  background: linear-gradient(281deg, #E0E07E, #062B45);
+}
+
+main .content {
+	margin:2em;
+	background: #fff;
+}
+
+
+nav .brand-text {
+	line-height: 1.4em;
+}
+
+aside, footer {
+	background-color: $primary-color-dark;
+}
+aside {
+	color: #fff;
+}
+footer a {
+	color: $primary-color-light;
+}
+
+footer.page-footer {
+	margin-top:0;
+	padding-top:0;
+
+	.footer-copyright {
+		padding: 0.1rem 1rem;
+	}
+}
+
+@media #{$medium-only} {
+	#service h4, #service p {
+		text-align: left;
+	}
+}

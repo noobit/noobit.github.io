@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+  {% include head.html %}
+  <body>
+   <div class="container">
+      <div class="row">
+        
+        <div class="col s12 m12">
+          <header>
+            <div class="brand">
+              Dipl. Inf. Roman Rauch
+              <div class="right">
+                web &bull; consulting &bull; development
+              </div>
+            </div>
+            <nav>
+              <div class="nav-wrapper">
+                <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+                <ul class="hide-on-small-and-down">
+                  <li class=""><a href="/about" class="waves-effect waves-light"><i class="small mdi-social-person left"></i>About</a></li>
+                  <li class=""><a href="/service" class="waves-effect waves-light"><i class="small mdi-action-view-list left"></i>Service</a></li>
+                  <li class=""><a href="/contact" class="waves-effect waves-light"><i class="small mdi-social-people left"></i>Contact</a></li>
+                </ul> 
+                <ul class="side-nav" id="mobile-demo">
+                   <li class=""><a href="#about" class="waves-effect waves-light"><i class="small mdi-social-person left"></i>About</a></li>
+                  <li class=""><a href="#service" class="waves-effect waves-light"><i class="small mdi-action-view-list left"></i>Service</a></li>
+                  <li class=""><a href="#contact" class="waves-effect waves-light"><i class="small mdi-social-people left"></i>Contact</a></li>
+                </ul>
+                <a href="/" class="brand-logo right">&#91;&#x02C8;nu&#x02D0;b&#618;t&#93;</a>      
+
+              </div>
+            </nav>
+          </header>
+
+          <main>
+            {{ content }}
+          </main>
+
+          <footer class="page-footer indigo darken-1">
+            <div class="footer-copyright">
+              © 2015 noobit
+              <div class="right">
+                <a href="#impressum">Impressum</a> 
+                &bull; 
+                <a href="#datenschutz">Datenschutz</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+
+        <!-- <aside class="col s12 m4 right-align">     
+          <a href="#" class="brand-logo right">&#91;&#x02C8;nu&#x02D0;b&#618;t&#93;</a>
+          <p>your partner in IT<br>
+          Mit dem Rauch | In der Wolke</p>
+        </aside> -->
+      
+      </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/assets/js/bin/materialize.js"></script>
+    <script src="/assets/js/bin/init.js"></script>
+
+  </body>
+</html>
