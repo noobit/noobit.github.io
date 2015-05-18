@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
   {% include head.html %}
-  <body>
-   <div class="container">
+  <body class="valign-wrapper">
+   <div class="container valign">
       <div class="row">
-        
-        <div class="col s12 m12">
-          <header>
-            <div class="brand">
-              Dipl. Inf. Roman Rauch
-              <div class="right">
-                web &bull; consulting &bull; development
-              </div>
-            </div>
-            <nav>
-              <div class="nav-wrapper">
-                <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <header class="col s12 m12 l4 right z-depth-5">
+          <a href="/" class="brand-text">&#91;&#x02C8;nu&#x02D0;b&#618;t&#93;</a>      
+          <p>
+            Dipl.-Inf. Roman Rauch<br>
+            <i class="tiny mdi-action-account-balance"></i>&nbsp;full stack web engineer</i>
+          </p>
+          <p>
+            web &bull; consulting &bull; development<br>
+            <i class="tiny mdi-maps-place"></i>&nbsp;Berlin, Germany</i>      
+          </p>
+          <button id="btn-link" class="btn-floating btn-large waves-effect waves-circle waves-light left orange"><i id="btn-icon" class="large mdi-communication-email"></i></button>
+        </header>
 
-                <ul class="hide-on-small-and-down">
-                  <li class=""><a href="/about" class="waves-effect waves-light"><i class="small mdi-social-person left"></i>About</a></li>
-                  <li class=""><a href="/service" class="waves-effect waves-light"><i class="small mdi-action-view-list left"></i>Service</a></li>
-                  <li class=""><a href="/contact" class="waves-effect waves-light"><i class="small mdi-social-people left"></i>Contact</a></li>
-                </ul> 
-                <ul class="side-nav" id="mobile-demo">
-                   <li class=""><a href="#about" class="waves-effect waves-light"><i class="small mdi-social-person left"></i>About</a></li>
-                  <li class=""><a href="#service" class="waves-effect waves-light"><i class="small mdi-action-view-list left"></i>Service</a></li>
-                  <li class=""><a href="#contact" class="waves-effect waves-light"><i class="small mdi-social-people left"></i>Contact</a></li>
-                </ul>
-                <a href="/" class="brand-logo right">&#91;&#x02C8;nu&#x02D0;b&#618;t&#93;</a>      
-
-              </div>
-            </nav>
-          </header>
-
-          <main>
+        <main class="col s12 m12 l8 left z-depth-5">
+          <section id="main">
             {{ content }}
-          </main>
-
-          <footer class="page-footer indigo darken-1">
-            <div class="footer-copyright">
-              © 2015 noobit
-              <div class="right">
-                <a href="#impressum">Impressum</a> 
-                &bull; 
-                <a href="#datenschutz">Datenschutz</a>
-              </div>
+          </section>
+          <section id="contact" style="display: none">  
+            <div class="row center">
+              <h5 class="indigo-text text-darken-4">Schreiben Sie mir</h5>
+              <h6 class="indigo-text">Ich antworte innherhalb von 24Stunden!</h6> 
+              <p class="indigo-text text-lighten-4"><strong>agil. robust. responsive. sicher.</strong></p>
             </div>
-          </footer>
-        </div>
+            <form action="//formspree.io/hardenberg.persico@googlemail.com" method="POST" id="contactForm">
+              <div class="input-field">
+                <i class="mdi-action-account-circle prefix"></i>
+                <input id="name" name="Name" type="text" class="validate" required />
+                <label for="first_name">Name</label>
+              </div>
+              <div class="input-field"> 
+                <i class="mdi-communication-email prefix"></i>
+                <input id="email" name="_replyto" type="email" class="validate" required />
+                <label for="email">E-Mail</label>
+              </div>
+              <div class="input-field"> 
+                <i class="mdi-editor-mode-edit prefix"></i>
+                <textarea id="message" name="message" class="materialize-textarea validate"></textarea>
+                <label for="message">Nachricht</label>
+              </div>
+              <input type="text" name="_gotcha" style="display:none" />
+              <input type="hidden" name="_subject" value="Kontaktformular Homepage" />
+              <button id="btn-send" class="btn waves-effect waves-light left orange" type="submit" name="action">Senden <i class="mdi-content-send right"></i>
+              </button>
+            </form>
+          </section>
+          <section >
+          
+          </section>
+        </main>
 
-        <!-- <aside class="col s12 m4 right-align">     
-          <a href="#" class="brand-logo right">&#91;&#x02C8;nu&#x02D0;b&#618;t&#93;</a>
-          <p>your partner in IT<br>
-          Mit dem Rauch | In der Wolke</p>
-        </aside> -->
-      
+        
+        <footer class="col s12 m12 l4 z-depth-5">
+          <small>
+            © 2015 noobit &bull; 
+            <a href="/impressum">Impressum</a> &bull; 
+            <a href="/datenschutz">Datenschutz</a>
+          </div>
+        </small>      
       </div>
     </div>
-
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="/assets/js/bin/materialize.js"></script>
-    <script src="/assets/js/bin/init.js"></script>
-
+    {% include feet.html %}
   </body>
 </html>

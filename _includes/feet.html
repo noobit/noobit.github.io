@@ -1,0 +1,27 @@
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+<script type="text/javascript">
+  document.getElementById('btn-link').addEventListener('click', function() {
+    $('#btn-icon').toggleClass('icon-refresh-animate mdi-communication-email mdi-navigation-close');  
+    $('#main').toggle();
+    $('#contact').toggle();
+  }, false);
+
+  $('#contactForm').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        url: '//formspree.io/hardenberg.persico@googlemail.com',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(data) {
+          $('#contact').hide(); 
+          $('#btn-icon').toggleClass('icon-refresh-animate'); 
+          $('#btn-icon').addClass('mdi-communication-email');
+          $('#btn-icon').removeClass('mdi-navigation-close'); 
+          $('#main').show();
+          $('#thx').show('slow');        
+        }
+      });
+    });  
+</script>

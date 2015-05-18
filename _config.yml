@@ -1,8 +1,7 @@
 # Site settings
-title: noobit -- freelance your it
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  The DNA for your next Webproject - Stay tuned!
+title: noobit -- agil. robust. responsive. sicher.
+email: roman.rauch@alumni.tu-berlin.de
+description: > #Website, responsive, Wordpress, HTML5, CSS3
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://noobit.github.io" # the base hostname & protocol for your site
 twitter_username: noobit

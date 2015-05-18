@@ -2,7 +2,218 @@
 ---
 @charset "utf-8";
 
-@import
-  "materialize",
-  "layout"
-;
+$primary-color: #3f51b5; /* indigo */
+$primary-color-light: #7986cb; 
+$secondary-color: #ff9800; 
+
+
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+$medium-only: "only screen and (min-width : 601px) and (max-width : 992px)" !default;
+
+
+main {
+	min-height:700px;
+	height:100%;
+	max-height:80vH;
+	overflow-y: scroll;
+	padding:1rem 2% !important;
+	background-color: #fff;	
+	i {
+		color:$primary-color;
+	}
+	button i {
+		color: #fff;
+	}
+}
+h5 {
+	word-break: break-word;
+}
+.container {
+	width:85%;
+}
+.card {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius:0;
+  margin:0;
+	.card-content {
+		  padding: 20px 0 20px 20px;
+	}
+	.card-reveal {
+		padding: 26px 20px;
+		height:auto;
+		background: rgba(255,255,255,.8);
+	}
+	p {
+		margin-bottom: 1%;
+	}
+}
+
+.brand-text {
+	font-size:3em;
+} 
+
+body {
+  background: linear-gradient(281deg, #E0E07E, #062B45);
+ 	height:100vH;
+}
+
+footer a {
+	color: $primary-color-light
+}
+
+footer.page-footer {
+	margin-top:0;
+	padding-top:0;
+	background-color: $primary-color;
+
+	.footer-copyright {
+		padding: 5rem 0 1rem 0;
+		line-height: inherit;
+		height:inherit;
+		background-color: inherit
+	}
+}
+
+header, footer {
+	padding:1rem !important;
+	text-align: right;
+	color:#fff;
+	background-color: $primary-color;
+}
+
+.icon-refresh-animate {
+  -webkit-animation-name: rotateThis;
+  -moz-animation-name: rotateThis;
+  -ms-animation-name: rotateThis;
+  -o-animation-name: rotateThis;
+  animation-name: rotateThis;
+   
+  -webkit-animation-duration: .2s;
+  -moz-animation-duration: .2s;
+  -o-animation-duration: .2s;
+  animation-duration: .2s;
+}
+ 
+@keyframes "rotateThis" {
+  from {
+    -webkit-transform: scale( 1 ) rotate( 0deg );
+   	-moz-transform: scale( 1 ) rotate( 0deg );
+   	-o-transform: scale( 1 ) rotate( 0deg );
+   	-ms-transform: scale( 1 ) rotate( 0deg );
+   	transform: scale( 1 ) rotate( 0deg );
+  }
+  to {
+    -webkit-transform: scale( 1 ) rotate( 360deg );
+   	-moz-transform: scale( 1 ) rotate( 360deg );
+   	-o-transform: scale( 1 ) rotate( 360deg );
+   	-ms-transform: scale( 1 ) rotate( 360deg );
+   	transform: scale( 1 ) rotate( 360deg );
+  }
+}
+ @-moz-keyframes rotateThis {
+  from {
+    -moz-transform: scale( 1 ) rotate( 0deg );
+    transform: scale( 1 ) rotate( 0deg );
+  }
+  to {
+    -moz-transform: scale( 1 ) rotate( 360deg );
+    transform: scale( 1 ) rotate( 360deg );
+  }
+}
+ 
+@-webkit-keyframes "rotateThis" {
+  from {
+    -webkit-transform: scale( 1 ) rotate( 0deg );
+    transform: scale( 1 ) rotate( 0deg );
+  }
+  to {
+    -webkit-transform: scale( 1 ) rotate( 360deg );
+    transform: scale( 1 ) rotate( 360deg );
+  }
+}
+ 
+@-ms-keyframes "rotateThis" {
+  from {
+    -ms-transform: scale( 1 ) rotate( 0deg );
+    transform: scale( 1 ) rotate( 0deg );
+  }
+  to {
+    -ms-transform: scale( 1 ) rotate( 360deg );
+    transform: scale( 1 ) rotate( 360deg );
+  }
+}
+ 
+@-o-keyframes "rotateThis" {
+  from {
+    -o-transform: scale( 1 ) rotate( 0deg );
+    transform: scale( 1 ) rotate( 0deg );
+  }
+  to {
+    -o-transform: scale( 1 ) rotate( 360deg );
+    transform: scale( 1 ) rotate( 360deg );
+  }
+}
+
+.input-field .prefix.active {
+ color: $secondary-color;
+}
+#btn-link {
+		left: -42px;
+		z-index:99;
+	}
+
+@media (min-width: $large-screen) {
+	.border-right {
+		border-right:1px solid rgba(0,0,0,.2);
+	}
+	.border-bottom {
+		border-bottom:1px solid rgba(0,0,0,.2);
+	}
+}	
+
+@media (max-width: $medium-screen) {
+	body {
+	 	height:auto;
+	}
+	main {
+		min-height: inherit;
+  	max-height: 100%;
+  	overflow-y: visible;
+	}
+	.container {
+		width: 80%;
+	}
+	#btn-link {
+		left: -42px;
+		top: 42px;
+	}
+}
+@media only screen and (min-width: 993px) and (max-width: $large-screen){
+	.ml6 {
+	  width: 100% !important;
+	  border:none;
+	}
+}
+
+@media (max-width: $small-screen) {
+	body {
+		background: none;
+	}
+	#service h4, #service p {
+		text-align: left;
+	}
+	.container {
+		width: 94%;
+		padding:0;
+	}
+	.row {
+		margin:0;
+	}
+	#btn-link {
+		left: 22px;
+		top: 42px;
+	}
+}
