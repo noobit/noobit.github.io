@@ -8,7 +8,7 @@ permalink: /
   <h5 class="indigo-text text-darken-4">Ihr Webprojekt in bester Hand</h5>
   <h6 class="indigo-text">Geben Sie sich nicht mit weniger zufrieden!</h6> 
   <p class="indigo-text text-lighten-4"><strong>agil. robust. responsive. sicher.</strong></p>
-  <h4 id="thx" class="center" style="display:none">Herzlichen Dank für Ihre Nachricht.</h4>
+  <h5 id="thx" class="center" style="display:none">Herzlichen Dank für Ihre Nachricht.</h5>
 </div>
 <div class="row">
   <div class="col s12 m12 l6 ml6 card border-bottom border-right">
